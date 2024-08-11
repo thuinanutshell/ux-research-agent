@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>User Research Management</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <h1>Interviewee Management</h1>
+
+    <!-- Table to display interviewees -->
+    <table id='intervieweeTable'>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Email</th>
+                <th>Status</th>
+                <th>Interview Date</th>
+                <th>Email Content</th>
+                <th>Send</th>
+            </tr>
+        </thead>
+        <tbody id='intervieweeList'></tbody>
+    </table>
+
+    <!-- Button to add new interviewee -->
+    <button onclick="addRow()">Add New Interviewee</button>
+    <script>
+        let interviewees = [];
+
+        // Load interviewees from the server
+        function renderTable() {
+            const listElement = document.getElementById('intervieweeList');
+            listElement.innerHTML = '';
+
+            interviewees.forEach((interviewee, index) => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${interviewee.id || ''}</td>
+                    <td>${interviewee.email || ''}</td>
+                    <td>${interviewee.status || 'Not Started'}</td>
+                    <td>${interviewee.interviewDate}</td>
+                    <td>${interviewee.emailContent}</td>
+                    <td>
+                        ${interviewee.id ? 
+                            `<button onclick="sendEmail(${index})">Send Email</button>` :
+                            `<button onclick="saveInterviewee(${index})">Send</button>`
+                        }
+                    </td>
+                `;
+                listElement.appendChild(row);
+            });
+        }
+
+        function addRow() {
+            interviewees.push({
+                id: '1',
+                email: 'abc@gmail.com',
+                status: 'Not Started',
+                interviewDate: '15/08/2024',
+                emailContent: 'Hi, we would like to invite you to participate in our user research.',
+            });
+            renderTable();
+        }
+    </script>
+</body>
+</html>
