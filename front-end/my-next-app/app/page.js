@@ -62,17 +62,6 @@ export default function Home() {
           </Box>
         </Modal>
 
-        {/* Create a modal for follow-up email*/}
-        <Modal open={open} onClose={handleClose}>
-          <Box sx={{p: 4, bgcolor: 'background.paper', borderRadius: 1}}>
-            <Typography variant='h4' marginBottom="20px">Follow-up Email</Typography>
-            <Stack spacing={2}>
-              <TextField label='Message' value={message} onChange={(e) => setMessage(e.target.value)} multiline />
-              <Button variant='outlined' onClick={handleSubmit} sx={{backgroundColor:'green', color:'white', ':hover':{backgroundColor:'darkgreen'}}}>Send</Button>
-            </Stack>
-          </Box>
-        </Modal>
-
         {/* Display User Database*/}
         <Box sx={{margin:'50px'}}>
           <Typography variant="h3" margin="50px" sx={{textAlign: 'center'}}>Outreach Management</Typography>
