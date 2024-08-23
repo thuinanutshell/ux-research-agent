@@ -5,7 +5,7 @@ As a result, Han and I are developing a web application to help solve this probl
 
 # Systems Design
 
-# Prototype
+# Low-Fidelity Mockup
 
 # Tech Stack
 - Frontend: React (Material UI), Next.js, Javascript
