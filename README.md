@@ -3,7 +3,7 @@ As someone who has conducted many user interviews for non-profit organizations a
 
 As a result, Han and I are developing a web application to help solve this problem. Our goal is to automate the process of outreach and interview scheduling and leveraging AI with the synthesis step. We believe that the ultimate priority of a user researcher is to generate actionable insights to help a business or organization serve the right needs for the right users rather than spending too much time on cumbersome logistics.
 
-# Systems Design
+# User Flow
 
 # Low-Fidelity Mockup
 
