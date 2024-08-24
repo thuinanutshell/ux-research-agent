@@ -4,6 +4,10 @@
   margin: 0;
 }
 
-.email-info {
-  font-family: 'Raleway', sans-serif;
+.root {
+  --font-family: var(--font-raleway);
+}
+
+body {
+  font-family: var(--font-raleway);
 }
